@@ -1,9 +1,25 @@
 ---
 layout: default
 ---
-<ul>
-    <header><img src="{{ '/assets/images/sample-logo.jpg' | relative_url }}"> </header>
-    {% for post in site.posts %}
-    <li><a href="{{ post.url | relative_url }} ">{{post.title}}</a></li>
-    {% endfor %}
-</ul>
+<header>
+    <h1>Blog pessoal</h1>
+    <h4>Gustavo Santos Torrico</h4>
+</header>
+<div class="container">
+    <div class="child-1">
+        <h3>Sobre mim</h3>
+        <p>Olá, sou o Gustavo e esse é meu blog pessoal para a disciplina de Sistemas de Informação. Tenho aqui algumas informações sobre mim na forma de postes.</p>
+    </div>
+    <img class="child-2" src="{{ '/assets/images/sample-logo.jpg' | relative_url }}" width="626" height="782">
+    <ul class="vertical-menu">
+        <!--<header><img src="{{ '/assets/images/sample-logo.jpg' | relative_url }}"> </header>-->
+        <!--<li><a href="{{ post.url | relative_url }}">{{post.title}}</a></li>-->
+        <a class="active" id="postes-t">Postes</a>
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}">{{post.title}}</a>
+        {% endfor %}
+    </ul>
+</div>
+<footer>
+    <p id="rodape"> PMR3304 - Entrega do Laboratório 1 - Setembro de 2020 </p>
+</footer>
