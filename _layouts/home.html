@@ -6,15 +6,17 @@ layout: default
     <h4>Gustavo Santos Torrico</h4>
 </header>
 <div class="container">
-    <div class="child-1">
-        <h3>Sobre mim</h3>
-        <p>Olá, sou o Gustavo e esse é meu blog pessoal para a disciplina de Sistemas de Informação. Tenho aqui algumas informações sobre mim na forma de postes.</p>
+    <div class="box1">
+        <div class="child-1">
+            <h3>Sobre mim</h3>
+            <p>Olá, sou o Gustavo e esse é meu blog pessoal para a disciplina de Sistemas de Informação. Tenho aqui algumas informações sobre mim na forma de postes. Espero que você goste :)</p>
+        </div>
     </div>
     <img class="child-2" src="{{ '/assets/images/sample-logo.jpg' | relative_url }}" width="626" height="782">
     <ul class="vertical-menu">
         <!--<header><img src="{{ '/assets/images/sample-logo.jpg' | relative_url }}"> </header>-->
         <!--<li><a href="{{ post.url | relative_url }}">{{post.title}}</a></li>-->
-        <a class="active" id="postes-t">Postes</a>
+        <a class="active" id="postes-t">Postes de ontem</a>
         {% for post in site.posts %}
         <a href="{{ post.url | relative_url }}">{{post.title}}</a>
         {% endfor %}
